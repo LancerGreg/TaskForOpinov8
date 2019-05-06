@@ -56,7 +56,7 @@ namespace TaskForOpinov8 {
             int[] A = new int[lenght];
             Random rand = new Random();
             for (int i = 0; i < lenght; i++)
-                A[i] = rand.Next(-10, 10);
+                A[i] = rand.Next(-1000000, 1000000);
             return A;
         }
 
@@ -89,10 +89,8 @@ namespace TaskForOpinov8 {
         }
 
         static void Main(string[] args) {
-            int lenght = 10;
-            int[] R = A(lenght);
-            Console.WriteLine(solution(R) + "\n");
-            Console.WriteLine(string.Join("\n", R));
+            int lenght = 1000000;
+            Console.WriteLine(solution(A(lenght)));
             Console.Read();
         }
     }
